@@ -355,3 +355,13 @@
     }
 
 }
+@media (max-width:768px){
+
+    .hero-bg-logo{
+
+        width:500px;
+
+        opacity:0.03;
+    }
+
+}

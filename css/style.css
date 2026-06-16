@@ -1110,3 +1110,33 @@ p{
         opacity:0;
     }
 }
+/* Hero Background Logo */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-bg-logo{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:
+    translate(-50%, -50%);
+
+    width:900px;
+
+    opacity:0.04;
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+.hero-grid{
+    position:relative;
+    z-index:2;
+}
