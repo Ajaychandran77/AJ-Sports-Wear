@@ -340,3 +340,18 @@
         font-size:14px;
     }
 }
+
+@media (max-width:768px){
+
+    .whatsapp-float{
+
+        width:58px;
+        height:58px;
+
+        font-size:30px;
+
+        right:20px;
+        bottom:20px;
+    }
+
+}
