@@ -1,0 +1,304 @@
+/* ==========================================
+   AJ SPORTS WEAR
+   ANIMATIONS.CSS
+========================================== */
+
+/* ==========================================
+   BASE ANIMATION STATES
+========================================== */
+
+.fade-up,
+.slide-left,
+.slide-right,
+.zoom-in{
+
+    opacity:0;
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+/* ==========================================
+   FADE UP
+========================================== */
+
+.fade-up{
+
+    transform:
+    translateY(60px);
+}
+
+/* ==========================================
+   SLIDE LEFT
+========================================== */
+
+.slide-left{
+
+    transform:
+    translateX(-80px);
+}
+
+/* ==========================================
+   SLIDE RIGHT
+========================================== */
+
+.slide-right{
+
+    transform:
+    translateX(80px);
+}
+
+/* ==========================================
+   ZOOM IN
+========================================== */
+
+.zoom-in{
+
+    transform:
+    scale(.85);
+}
+
+/* ==========================================
+   ACTIVE STATE
+========================================== */
+
+.animate{
+
+    opacity:1 !important;
+    transform:none !important;
+}
+
+/* ==========================================
+   STAGGER EFFECTS
+========================================== */
+
+.stagger-1{
+    transition-delay:.1s;
+}
+
+.stagger-2{
+    transition-delay:.2s;
+}
+
+.stagger-3{
+    transition-delay:.3s;
+}
+
+.stagger-4{
+    transition-delay:.4s;
+}
+
+.stagger-5{
+    transition-delay:.5s;
+}
+
+/* ==========================================
+   FLOATING ANIMATION
+========================================== */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.card-1{
+    animation:floating 5s ease-in-out infinite;
+}
+
+.card-2{
+    animation:floating 6s ease-in-out infinite;
+}
+
+.card-3{
+    animation:floating 7s ease-in-out infinite;
+}
+
+/* ==========================================
+   LOGO SLIDER
+========================================== */
+
+@keyframes logoScroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+.logo-track{
+
+    width:max-content;
+
+    animation:
+    logoScroll 25s linear infinite;
+}
+
+.logo-slider:hover .logo-track{
+    animation-play-state:paused;
+}
+
+/* ==========================================
+   IMAGE HOVER ZOOM
+========================================== */
+
+.product-card img,
+.gallery-item img,
+.masonry-item img{
+
+    transition:
+    transform .7s ease;
+}
+
+/* ==========================================
+   BUTTON RIPPLE EFFECT
+========================================== */
+
+.btn{
+
+    position:relative;
+    overflow:hidden;
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+    height:0;
+
+    left:50%;
+    top:50%;
+
+    background:
+    rgba(255,255,255,.25);
+
+    border-radius:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    transition:
+    width .6s ease,
+    height .6s ease;
+}
+
+.btn:hover::before{
+
+    width:350px;
+    height:350px;
+}
+
+/* ==========================================
+   SOFT GLOW
+========================================== */
+
+@keyframes glow{
+
+    0%{
+        box-shadow:
+        0 0 0 rgba(255,90,31,.2);
+    }
+
+    50%{
+        box-shadow:
+        0 0 35px rgba(255,90,31,.35);
+    }
+
+    100%{
+        box-shadow:
+        0 0 0 rgba(255,90,31,.2);
+    }
+}
+
+.btn-primary{
+    animation:glow 4s infinite;
+}
+
+/* ==========================================
+   HERO SHAPE ROTATION
+========================================== */
+
+@keyframes rotateSlow{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.shape-1{
+    animation:rotateSlow 40s linear infinite;
+}
+
+.shape-2{
+    animation:rotateSlow 60s linear infinite reverse;
+}
+
+/* ==========================================
+   CARD LIFT
+========================================== */
+
+.product-card,
+.testimonial-card,
+.why-card{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.product-card:hover,
+.testimonial-card:hover,
+.why-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.12);
+}
+
+/* ==========================================
+   FILTER TRANSITIONS
+========================================== */
+
+.gallery-item{
+
+    transition:
+    opacity .4s ease,
+    transform .4s ease;
+}
+
+.gallery-item.hide{
+
+    opacity:0;
+    transform:scale(.9);
+    pointer-events:none;
+}
+
+/* ==========================================
+   SMOOTH SECTION ENTRY
+========================================== */
+
+.section{
+    overflow:hidden;
+}
