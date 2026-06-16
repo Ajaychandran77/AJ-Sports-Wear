@@ -273,7 +273,9 @@ p{
 }
 
 .logo img{
-    height:70px;
+    height:90px;
+    width:auto;
+    transition:0.3s ease;
 }
 
 .nav-links{
