@@ -303,30 +303,34 @@
     overflow:hidden;
 }
 
-.palette-card::before{
+.palette-card{
 
-    content:"";
+    position:relative;
 
-    position:absolute;
+    overflow:hidden;
 
-    top:0;
-    left:-120%;
-
-    width:80px;
-    height:100%;
-
-    background:
-    linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.4),
-        transparent
-    );
-
-    transition:.8s;
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease;
 }
 
-.palette-card:hover::before{
+.palette-card:hover{
 
-    left:130%;
+    transform:
+    translateY(-12px);
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.15);
+}
+
+.palette-card img{
+
+    transition:
+    transform .7s ease;
+}
+
+.palette-card:hover img{
+
+    transform:
+    scale(1.08);
 }
