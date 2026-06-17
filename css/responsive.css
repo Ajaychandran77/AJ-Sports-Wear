@@ -365,3 +365,22 @@
     }
 
 }
+@media (max-width:992px){
+
+    .palette-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:768px){
+
+    .palette-grid{
+        grid-template-columns:1fr;
+    }
+
+    .palette-features{
+        flex-direction:column;
+    }
+
+}
